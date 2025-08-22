@@ -23,6 +23,23 @@
     .top-section .text {
       flex: 1;
     }
+	  @media (max-width: 768px) {
+  .top-section {
+    flex-direction: column; /* stack picture above text */
+    align-items: center;    /* center the picture */
+    text-align: center;     /* center text if you like */
+  }
+
+  .top-section img {
+    width: 180px; /* slightly smaller on mobile */
+    margin-bottom: 1rem;
+  }
+
+  .top-section .text {
+    text-align: left; /* or keep centered if you prefer */
+    width: 100%;
+  }
+}
     body { font-family: Georgia, serif;
   line-height: 1.6;
   margin: 1rem auto;   
