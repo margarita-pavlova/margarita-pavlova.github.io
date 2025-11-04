@@ -10,13 +10,13 @@
     font-family: Georgia, serif;
     line-height: 1.6;
     margin: 2rem auto;
-    max-width: 1100px;
+    max-width: 900px;
     color: #222;
     padding: 0 1rem;
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 0;
   }
 
@@ -48,23 +48,22 @@
   /* HEADER LAYOUT */
   header.top-section {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 50px;
-    margin-bottom: 2.5rem;
+    align-items: flex-start; /* aligns top edges */
+    gap: 25px;
+    margin-bottom: 2rem;
   }
 
   header.top-section img {
-    width: 420px;          /* large image */
-    height: auto;
-    border-radius: 10px;
-    object-fit: cover;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    flex-shrink: 0;        /* prevents it from resizing smaller */
+    width: 230px;          /* slightly smaller than before */
+    height: 230px;         /* makes it perfectly square */
+    border-radius: 6px;
+    object-fit: cover;     /* keeps the image square without distortion */
+    flex-shrink: 0;
   }
 
   header.top-section .image-contact {
     text-align: center;
+    flex-shrink: 0;
   }
 
   header.top-section .image-contact p {
@@ -73,11 +72,10 @@
 
   header.top-section .text {
     flex: 1;
-    min-width: 400px;
   }
 
   /* Responsive: stack image above text */
-  @media (max-width: 900px) {
+  @media (max-width: 768px) {
     header.top-section {
       flex-direction: column;
       align-items: center;
@@ -85,7 +83,8 @@
     }
 
     header.top-section img {
-      width: 260px;
+      width: 180px;
+      height: 180px;
       margin-bottom: 1rem;
     }
 
