@@ -10,13 +10,13 @@
     font-family: Georgia, serif;
     line-height: 1.6;
     margin: 2rem auto;
-    max-width: 900px;
+    max-width: 950px;
     color: #222;
     padding: 0 1rem;
   }
 
   h1 {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     margin-bottom: 0;
   }
 
@@ -48,16 +48,17 @@
   /* HEADER LAYOUT */
   header.top-section {
     display: flex;
-    align-items: flex-start; /* aligns top edges */
-    gap: 25px;
-    margin-bottom: 2rem;
+    align-items: flex-end; /* aligns image bottom with text bottom */
+    gap: 30px;
+    margin-bottom: 2.5rem;
   }
 
   header.top-section img {
-    width: 230px;          /* slightly smaller than before */
-    height: 230px;         /* makes it perfectly square */
-    border-radius: 6px;
-    object-fit: cover;     /* keeps the image square without distortion */
+    width: 300px;          /* nice large size */
+    height: 300px;         /* square */
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     flex-shrink: 0;
   }
 
@@ -74,7 +75,7 @@
     flex: 1;
   }
 
-  /* Responsive: stack image above text */
+  /* Responsive */
   @media (max-width: 768px) {
     header.top-section {
       flex-direction: column;
@@ -83,8 +84,8 @@
     }
 
     header.top-section img {
-      width: 180px;
-      height: 180px;
+      width: 220px;
+      height: 220px;
       margin-bottom: 1rem;
     }
 
@@ -101,6 +102,7 @@
     text-align: center;
   }
 </style>
+
 </head>
 <body>
   <header class="top-section">
